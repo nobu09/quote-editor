@@ -10,5 +10,10 @@
   },
   "dependencies": {
     "sass": "^1.82.0"
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nobu09/quote-editor.git",
+  "author": "nobu09 <11857481+nobu09@users.noreply.github.com>",
+  "license": "MIT"
 }
