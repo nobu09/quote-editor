@@ -27,7 +27,10 @@ class QuotesController < ApplicationController
 
   def update
     if @quote.update(quote_params)
-      redirect_to @quote, notice: "Quote was successfully updated."
+      respond_to do |format|
+        format.html { redirect_to @quote, notice: "Quote was successfully updated." } # 通常のHTMLリクエスト用
+        format.turbo_stream # Turboフレームリクエスト用
+      end
     else
       render :edit, status: :unprocessable_entity
     end
