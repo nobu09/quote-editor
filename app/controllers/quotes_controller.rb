@@ -16,7 +16,7 @@ class QuotesController < ApplicationController
     @quote = Quote.new(quote_params)
 
     if @quote.save
-      redirect_to @quote, notice: "Quote was successfully created."
+      redirect_to quotes_path, notice: "Quote was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
